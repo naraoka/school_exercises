@@ -1,0 +1,434 @@
+/*アコーディオン部分*/
+
+input[type="checkbox"].on-off {
+    display: none;
+}
+
+.menua ul {
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menua li {
+    padding: 5px;
+}
+
+input[type="checkbox"].on-off+ul {
+    height: 220px;
+    overflow: hidden;
+}
+
+input[type="checkbox"].on-off:checked+ul {
+    height: 1000px;
+}
+
+
+/*上部メニュー*/
+
+#menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#menu li {
+    display: inline;
+    padding: 0;
+    margin: 0;
+    background-color: #474655;
+    float: left;
+}
+
+#menu li a {
+    display: block;
+    border-left: 10px solid #C97556;
+    background-color: #474655;
+    padding: 5px 1px;
+    text-decoration: none;
+    color: #E1E2CF;
+    width: 100%;
+    margin: 1px 0px;
+    text-align: center;
+    font-size: 20px;
+}
+
+#menu li a:hover {
+    border-left: 10px solid #990033;
+    background-color: #474655;
+}
+
+
+/*ボールアニメ上二つとした二つで同じ動き*/
+
+ul {
+    list-style: none;
+    width: calc(Full + 2em);
+    margin: 0 auto;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.ball {
+    display: block;
+    width: 1em;
+    height: 1em;
+    padding: .5em;
+    color: #fff;
+    background: #20b2aa;
+    line-height: 1;
+    text-align: center;
+    border-radius: 50%;
+    /* easeOutExpo */
+    -webkit-animation: 5s cubic-bezier(0.19, 1, 0.22, 1) infinite alternate;
+    animation: 5s cubic-bezier(0.19, 1, 0.22, 1) infinite alternate;
+}
+
+li:nth-child(1) .ball {
+    -webkit-animation-name: rolling1;
+    animation-name: rolling1;
+}
+
+li:nth-child(2) .ball {
+    -webkit-animation-name: rolling2;
+    animation-name: rolling2;
+}
+
+li:nth-child(3) .ball {
+    -webkit-animation-name: rolling3;
+    animation-name: rolling3;
+}
+
+li:nth-child(4) .ball {
+    -webkit-animation-name: rolling4;
+    animation-name: rolling4;
+}
+
+@-webkit-keyframes rolling1 {
+    0% {
+        -webkit-transform: translateX(0) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateX(360px) rotate(1440deg);
+    }
+}
+
+@-webkit-keyframes rolling2 {
+    0% {
+        -webkit-transform: translateX(0) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateX(360px) rotate(1440deg);
+    }
+}
+
+@-webkit-keyframes rolling3 {
+    0% {
+        -webkit-transform: translateX(0) rotate(0deg);
+    }
+    10% {
+        -webkit-transform: translateX(90px) rotate(360deg);
+    }
+    30% {
+        -webkit-transform: translateX(180px) rotate(720deg);
+    }
+    60% {
+        -webkit-transform: translateX(270px) rotate(1080deg);
+    }
+    100% {
+        -webkit-transform: translateX(360px) rotate(1440deg);
+    }
+}
+
+@-webkit-keyframes rolling4 {
+    0% {
+        -webkit-transform: translateX(0) rotate(0deg);
+    }
+    10% {
+        -webkit-transform: translateX(90px) rotate(360deg);
+    }
+    30% {
+        -webkit-transform: translateX(180px) rotate(720deg);
+    }
+    60% {
+        -webkit-transform: translateX(270px) rotate(1080deg);
+    }
+    100% {
+        -webkit-transform: translateX(360px) rotate(1440deg);
+    }
+}
+
+@keyframes rolling1 {
+    0% {
+        transform: translateX(0) rotate(0deg);
+    }
+    100% {
+        transform: translateX(360px) rotate(1440deg);
+    }
+}
+
+@keyframes rolling2 {
+    0% {
+        transform: translateX(0) rotate(0deg);
+    }
+    100% {
+        transform: translateX(360px) rotate(1440deg);
+    }
+}
+
+@keyframes rolling3 {
+    0% {
+        transform: translateX(0) rotate(0deg);
+    }
+    10% {
+        transform: translateX(90px) rotate(360deg);
+    }
+    30% {
+        transform: translateX(180px) rotate(720deg);
+    }
+    60% {
+        transform: translateX(270px) rotate(1080deg);
+    }
+    100% {
+        transform: translateX(360px) rotate(1440deg);
+    }
+}
+
+@keyframes rolling4 {
+    0% {
+        transform: translateX(0) rotate(0deg);
+    }
+    10% {
+        transform: translateX(90px) rotate(360deg);
+    }
+    30% {
+        transform: translateX(180px) rotate(720deg);
+    }
+    60% {
+        transform: translateX(270px) rotate(1080deg);
+    }
+    100% {
+        transform: translateX(360px) rotate(1440deg);
+    }
+}
+
+
+/*ボタンアニメ*/
+
+.txt {
+    margin: 50px 0 0;
+    text-align: center;
+}
+
+.txt a {
+    color: lightSeaGreen;
+}
+
+.txt a:hover {
+    color: indianRed;
+    text-decoration: none;
+}
+
+header {
+    background: url(img/header-back.png)0 0 no-repeat;
+    background-size: cover;
+    padding-top: 0%;
+}
+
+#work ul {
+    list-style: none;
+}
+
+#work li {
+    float: left;
+    padding: 0px 3px;
+}
+
+footer {
+    background-color: #ffffff color:white;
+    text-align: center
+}
+
+
+/*ナビゲーションバー*/
+
+div.nav {
+    width: 100%;
+    /* ナビゲーションの幅 */
+    font-size: 80%;
+}
+
+
+/*下部メニューエリア*/
+
+div.nav ul.nl {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: left;
+}
+
+
+/*メニュー項目*/
+
+div.nav ul.nl li {
+    margin-bottom: 2px;
+    /* 項目の下マージン */
+    border-bottom: 1px #8ca654 dotted;
+    /* 項目の下境界線 */
+}
+
+
+/* リンク */
+
+div.nav ul.nl li a {
+    display: block;
+    position: relative;
+    /* IE6用 */
+    padding: 12px 10px;
+    /* リンクエリアのパディング（上下、左右） */
+    background: #474655 url(ver_menu5_3off.gif) repeat-y right;
+    /* リンクエリアの背景 */
+    color: #FFFFFF;
+    /* 文字色 */
+    text-decoration: none;
+    /* テキストの下線（なし） */
+}
+
+
+/* --- ポイント時の設定 --- */
+
+div.nav ul.nl li a:hover {
+    background: gray url(ver_menu5_3on.gif) repeat-y right;
+    /* ポイント時の背景 */
+    text-decoration: underline;
+    /* テキストの下線（あり） */
+}
+
+body {
+    font-family: メイリオ;
+    background-color: white
+}
+
+h1 {
+    background-color:
+}
+
+h2 {
+    background-color: aquamarine;
+    width: 100%;
+}
+
+* {
+    margin: 0;
+}
+
+nav {
+    background-color: lightblue
+}
+
+#menu li {
+    display: inline-block;
+    text-align: center;
+    width: 25%;
+}
+
+#menu a {
+    color: black;
+    text-decoration: none;
+}
+
+.pagetop {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 15px;
+}
+
+.pagetop a {
+    display: block;
+    background-color: deepskyblue;
+    text-align: center;
+    color: #222;
+    font-size: 12px;
+    text-decoration: none;
+    padding: 5px 10px;
+    filter: alpha(opacity=50);
+    -moz-opacity: 0.5;
+    opacity: 0.5;
+}
+
+.pagetop a:hover {
+    display: block;
+    background-color: #b2d1fb;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    text-decoration: none;
+    padding: 5px 10px;
+    filter: alpha(opacity=50);
+    -moz-opacity: 0.5;
+    opacity: 0.5;
+}
+
+body {
+    animation: fadeIn 2s ease 0s 1 normal;
+    -webkit-animation: fadeIn 2s ease 0s 1 normal;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+.globalNav {
+    list-style: none;
+    overflow: hidden;
+}
+
+.globalNav li {
+    float: left;
+    border-right: 1px solid #DDD;
+}
+
+.globalNav li a {
+    display: block;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+}
+
+.globalNav li a span {
+    display: block;
+    margin: 3px 0 0 0;
+    color: #AAA;
+    text-transform: uppercase;
+    font-size: 80%;
+    letter-spacing: 1px;
+}
+
+.globalNav li a:hover {
+    background: #EEE;
+}
